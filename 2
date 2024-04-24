@@ -1,0 +1,28 @@
+/*
+Desarrollar un programa que solicite la carga de 10 números e 
+imprima la suma de los últimos 5 valores ingresados.
+*/
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int i,suma,numeros,x,primeros;
+    
+    suma = 0;
+    cout << "Ingrese los 10 numeros: " << endl;
+    for(i=1;i<=5;i++)
+    {
+        cout << "Ingrese el Numero: " << i << endl;
+        cin >> primeros;
+    }
+    for(x=6;x <= 10;x++)
+    {
+        cout << "Ingrese el Numero: " << x << endl;
+        cin >> numeros;
+        suma = suma + numeros;
+    }
+    cout << "La suma de los ultimos 5 numeros es: " << suma << endl;
+}
