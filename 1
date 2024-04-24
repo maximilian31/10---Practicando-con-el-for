@@ -1,0 +1,45 @@
+/*
+Confeccionar un programa que lea n pares de datos, cada par de datos corresponde 
+a la medida de la base y la altura de un triángulo. El programa deberá informar:
+a) De cada triángulo la medida de su base, su altura y su superficie.
+b) La cantidad de triángulos cuya superficie es mayor a 12.
+
+*/
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int cantidad, i, n, cuantos, contadorSuperficie;
+    float superficie, lado, base ;
+       
+    contadorSuperficie = 0;
+    
+    cantidad = 0;
+    cout << "Cuantos triangulos usa como dato: " << endl;
+    cin >> cuantos;
+    
+    for(i=1; i<=cuantos; i++)
+    {
+        
+       cout << "Ingrese cuanto mide el lado: " << endl;
+       cin >> lado;
+       cout << "Ingrese cuanto mide la base: " << endl;
+       cin >> base; 
+       cout << "Su base mide: " << base << " m " << endl;
+       cout << "\n";
+       cout << "Su lado mide: " << lado << " m " << endl;
+       cout << "\n";
+       superficie = (base * lado) / 2;
+       cout << "Su superficie mide: " << superficie << " m2 " << endl;
+       cout << "\n";
+         if(superficie > 12)
+         {
+             contadorSuperficie = contadorSuperficie + 1;
+         }
+    
+    }
+    cout << "La cantidad de triangulos cuya superficie es > a 12 es: " << contadorSuperficie << endl;
+}
