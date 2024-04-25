@@ -1,0 +1,63 @@
+/******************************************************************************
+
+Se cuenta con la siguiente información:
+Las edades de 5 estudiantes del turno mañana.
+Las edades de 6 estudiantes del turno tarde.
+Las edades de 11 estudiantes del turno noche.
+Las edades de cada estudiante deben ingresarse por teclado.
+a) Obtener el promedio de las edades de cada turno (tres promedios)
+b) Imprimir dichos promedios (promedio de cada turno)
+c) Mostrar por pantalla un mensaje que indique cual de los tres turnos tiene un promedio de edades mayor.
+
+
+*******************************************************************************/
+#include <stdio.h>
+#include "iostream"
+using namespace std;
+
+int main()
+{
+  int edad,maniana,tarde,noche,m,t,n,promediom,promediot,promedion;
+  tarde=0;
+  noche=0;
+  maniana=0;
+  
+  for(t=1;t<=6;t++)
+  {
+    cout << "Escribir la edad de los estudiantes del turno tarde" << endl;
+    cin >> edad;
+    tarde = tarde + edad;
+  }
+  
+  for(m=1;m<=5;m++)
+  {
+    cout << "Escribir la edad de los estudiantes del turno maniana" << endl;
+    cin >> edad;
+    maniana = maniana + edad;
+  }
+  
+  for(n=1;n<=11;n++)
+  {
+    cout << "Escribir la edad de los estudiantes del turno noche" << endl;
+    cin >> edad;
+    noche = noche + edad;
+  }
+  promediom = maniana / 5;
+  promediot = tarde / 6;
+  promedion = noche / 11;
+  
+  cout << "El promedio del turno maniana es: " << promediom << endl;
+  cout << "El promedio del turno tarde es: " << promediot << endl;
+  cout << "El promedio del turno noche es: " << promedion << endl;
+  
+  if(promediom>promediot and promediom>promedion)
+  {
+    cout << "El turno que tiene un promedio de edad mayor es el turno maniana "<< endl;  
+  } else if (promediom>promediot and promediom<promedion)
+    {
+     cout << "El turno que tiene un promedio de edad mayor es el turno noche "<< endl; 
+    } else
+      {
+        cout << "El turno que tiene un promedio de edad mayor es el turno tarde "<< endl;
+      }
+}
